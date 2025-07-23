@@ -9,6 +9,8 @@ public class testStudent {
         // ()-  constructor calling bracket
         ram = new student(1001, "ram", new int[]{99, 99, 100});  // new -keyword (Runtime memory allocation)
         ram.print();
+        ram.setEmail("ram@gmai.com");
+        System.out.println("Email - "+ram.getEmail());
         // ram.roll = 3249043;
         // ram.name = "jg;k";
         // ram.marks = new int[]{52239, 9452239, 1452300};

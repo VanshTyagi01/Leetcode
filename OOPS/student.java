@@ -8,7 +8,41 @@ public class student {
     private int roll;
     private String name;
     private int[] marks = new int[3];
-    String collegeName;
+    private boolean rewards;
+    private String email;
+    private String phone;
+    public int[] getMarks() {
+        return marks;
+    }
+    public void setMarks(int[] marks) {
+        this.marks = marks;
+    }
+    public boolean isRewards() {
+        return rewards;
+    }
+    public void setRewards(boolean rewards) {
+        this.rewards = rewards;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public String getPhone() {
+        return phone;
+    }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+    private String city;
+    private String collegeName;
     // init block
     // {
     //     System.out.println("init block");
@@ -53,4 +87,6 @@ public class student {
     // void student(){
     //     System.out.println("i am a default constructor");
     // }
+
+    
 }
