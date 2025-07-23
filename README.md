@@ -1,38 +1,49 @@
-# 🚀 LeetCode Solutions
+# 🚀 LeetCode & DSA Solutions
 
-A collection of my algorithm and data structure solutions from LeetCode practice.
+A comprehensive collection of algorithm, data structure, and object-oriented programming solutions.
+
+## 📊 Progress Overview
+- **Total Problems Solved:** 36+
+- **Trees:** 22 problems
+- **Graphs:** 10 implementations  
+- **OOP Concepts:** 4 examples
 
 ## 📁 Repository Structure
 
 ```
-📂 Graph/
-   └── Graph implementation using adjacency list
+📂 Graph/ (10 files)
+   └── Graph representation and algorithms
+   └── Adjacency list implementations
+   └── Graph traversal techniques
 
-📂 Trees/
+📂 Trees/ (22 files)
    └── Binary tree problems and traversals
-   └── BST operations and validations
+   └── BST operations and validations  
    └── Tree construction and manipulation
+   └── Path problems and level-order traversals
 
-📂 OOPS/
-   └── Object-Oriented Programming concepts
+📂 OOPS/ (4 files)
+   └── Object-Oriented Programming fundamentals
    └── Class definitions and object creation
-   └── Student class implementation examples
+   └── Encapsulation and data modeling
 ```
 
 ## 🛠️ Technologies
-- **Language:** Java
+- **Language:** Java ☕
 - **Focus:** Data Structures & Algorithms
 - **Concepts:** Object-Oriented Programming
+- **Version Control:** Git & GitHub
 
 ## 🎯 Problem Categories
-- **Trees:** Binary trees, BST, traversals, path problems
-- **Graphs:** Adjacency list representation, graph algorithms
-- **OOP:** Classes, objects, encapsulation, and basic Java concepts
+- **🌳 Trees:** Binary trees, BST, traversals, path problems, level-order
+- **🕸️ Graphs:** Adjacency list representation, graph algorithms  
+- **🎭 OOP:** Classes, objects, encapsulation, and core Java concepts
 
 ## 📝 Key Features
-- Clean, well-commented code
-- Modular structure with organized folders
-- Practical implementation of core CS concepts
+- ✅ Clean, well-commented code
+- 📁 Modular structure with organized folders
+- 🎓 Practical implementation of core CS concepts
+- 🔧 Hands-on problem-solving approach
 
 ---
 *Happy Coding! 💻*
