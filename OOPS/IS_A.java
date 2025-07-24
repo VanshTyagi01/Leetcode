@@ -4,6 +4,7 @@ import java.util.*;
 *Saving Account
 Current Account
 
+UP CASTING  (convert child object into parent object, runs common functions only)
 
 private -> default -> protected -> public
 
@@ -14,6 +15,8 @@ private -> default -> protected -> public
 3. child can throw same of sub exception of parent function 
    sub exception (child exception class  of of a parent exception class)
 */
+
+import javax.swing.text.DefaultEditorKit.CutAction;
 
 
 class Summary{
@@ -65,23 +68,58 @@ class CurrentAccount extends Account{
         // you can increase the access but can not decrease it. public -> private XX ||  private -> public OO
 
         // super.roi();  // super has reference of parent class members
-        System.out.println("Saving Account ROI is 5%");
+        System.out.println("Current Account ROI is 5%");
         AdvancedSummary summary = new AdvancedSummary();
         return summary;
     }
 }
+
+class AccountCaller{
+    void call(Account account)throws Exception{
+        // Common Code
+        account.deposit();
+        account.withDraw();
+        account.roi();
+        if(account instanceof SavingAccoutn){
+            // down casting 
+            ((SavingAccoutn)account).limit();
+        }else if(account instanceof CurrentAccount){
+            ((CurrentAccount)account).odLimit();
+        }
+        System.out.println("***************");
+    }
+}
+
 public class IS_A {
+
+    static void print(List<Integer> list){   
+        // polymorphic function
+        list.add(23);
+        System.out.println(list);
+    }
+
+
     public static void main(String[] args) throws Exception {
-        SavingAccoutn sa = new SavingAccoutn();
-        sa.deposit();
-        sa.withDraw();
-        sa.roi();
-        sa.limit();
-        System.out.println("***********************************************");
-        CurrentAccount ca = new CurrentAccount();
-        ca.deposit();
-        ca.withDraw();
-        ca.roi();
-        ca.odLimit();
+
+        print(new ArrayList<>());      /////     polymorphic sunction call 
+        print(new LinkedList<>());     //     ArrayList, LinkedList, Vector are all child class of List class
+        print(new Vector<>());         // this follows SOLID L (Liskov substitution rule)
+
+
+        AccountCaller ac = new AccountCaller();
+        // SavingAccoutn sa = new SavingAccoutn();
+        // Account account = new SavingAccoutn(); // UP CASTING
+        ac.call(new SavingAccoutn());  // UP CASTING
+        ac.call(new CurrentAccount()); // UP CASTING 
+        // sa.deposit();
+        // sa.withDraw();
+        // sa.roi();
+        // sa.limit();
+        // System.out.println("***********************************************");
+        // CurrentAccount ca = new CurrentAccount();
+        // ca.deposit();
+        // ca.withDraw();
+        // ca.roi();
+        // ca.odLimit();
     }
 }
