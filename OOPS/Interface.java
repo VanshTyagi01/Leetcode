@@ -7,7 +7,7 @@
  * Interface Segration function (divide the interface in many parts)
  * single class can implements any numbers of interfaces
  * 
- * 
+ *  Interface helps in making loosely coupled classes
  * first class is inherited then interface is implemented if any
  */
 interface  IPlayer{
