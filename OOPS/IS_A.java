@@ -16,7 +16,6 @@ private -> default -> protected -> public
    sub exception (child exception class  of of a parent exception class)
 */
 
-import javax.swing.text.DefaultEditorKit.CutAction;
 
 
 class Summary{
@@ -29,16 +28,19 @@ class AdvancedSummary extends Summary{
     String dayWise;
     String monthWise;
 }
-class Account{
+abstract class Account{
     int id;
     String name;
 
     void deposit(){
         System.out.println("Amount Deposit....");
     }
-    void withDraw(){
-        System.out.println("Amount Withdraw....");
-    }
+    // void withDraw(){
+    //     System.out.println("Amount Withdraw....");
+    // }
+
+    abstract void withDraw();
+
     Summary roi ()throws Exception{
         System.out.println("Amount ROI....");
         Summary summary = new Summary();
@@ -53,6 +55,10 @@ class Account{
 class SavingAccoutn extends Account{
     void limit(){
         System.out.println("Saving Account Daily Limit of 50 Lakh");
+    }
+    @Override
+    void withDraw(){
+        System.out.println("Saving acount withdraw with limit");
     }
 }
 
@@ -71,6 +77,10 @@ class CurrentAccount extends Account{
         System.out.println("Current Account ROI is 5%");
         AdvancedSummary summary = new AdvancedSummary();
         return summary;
+    }
+    @Override
+    void withDraw() {
+        System.out.println("CA withdraw with odLimit");
     }
 }
 
@@ -111,6 +121,11 @@ public class IS_A {
         // Account account = new SavingAccoutn(); // UP CASTING
         ac.call(new SavingAccoutn());  // UP CASTING
         ac.call(new CurrentAccount()); // UP CASTING 
+
+
+        // ac.call(new Account()); // can not makea  object as main class is abstract, can only be inherited 
+
+
         // sa.deposit();
         // sa.withDraw();
         // sa.roi();
