@@ -9,7 +9,7 @@ public class SOLID {
  * O -> Open Close Principle (Class open for extension, close for modification) (inherit calss for modification)
  * L -> Liskov substitution Principle 
  *      (function that use reference to base classes must be able to use object of derived classes wihtout knowing it)
- * I ->
+ * I -> Interface Segration Principle (class should not be force to use method that do not use from abstract class)
  * D ->
  * 
  * 
