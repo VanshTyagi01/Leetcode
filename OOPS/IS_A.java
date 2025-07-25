@@ -5,6 +5,11 @@ import java.util.*;
 Current Account
 
 UP CASTING  (convert child object into parent object, runs common functions only)
+Down Casting (convert parent obj into child obj, runs child uncommon function only)
+
+Abstraction -> common class and can not be modified, only inherited
+Abstracted function in parent class -> necessary for child to override them
+
 
 private -> default -> protected -> public
 
@@ -92,9 +97,9 @@ class AccountCaller{
         account.roi();
         if(account instanceof SavingAccoutn){
             // down casting 
-            ((SavingAccoutn)account).limit();
+            ((SavingAccoutn)account).limit(); // DownCasting
         }else if(account instanceof CurrentAccount){
-            ((CurrentAccount)account).odLimit();
+            ((CurrentAccount)account).odLimit();  // DownCasting
         }
         System.out.println("***************");
     }
