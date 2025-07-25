@@ -27,7 +27,6 @@ class RedPlayer implements IPlayer, Extraower{
     public void punch() {
         final int value = MAX_POWER;
         System.out.println("Punch "+value);
-        
     }
     @Override
     public void walk(){
