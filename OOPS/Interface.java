@@ -8,10 +8,8 @@
  * single class can implements any numbers of interfaces
  * 
  * 
- * 
  * first class is inherited then interface is implemented if any
  */
-
 interface  IPlayer{
     int MAX_POWER = 100;   // by default (public static final MAX_POWER = 100;)
     int MIN_POWER = 10;
